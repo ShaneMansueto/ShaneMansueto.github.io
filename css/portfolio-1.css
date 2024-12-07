@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    background-color: hsl(244 5 10);
+}
+p{
+    counter-increment: pages;
+    justify-self: center;
+}
+p::after{
+    content: "Page "counter(pages);
+}
+.background{
+    position: fixed;
+    height: 100vh;
+    background: hsl(200 20 20);
+}
+.sticky{
+    display: flex;
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    background-image: linear-gradient(90deg, hsl(244deg 35% 30%), hsl(243.69deg 43.21% 9.87%));
+    padding-left: 10%;
+    gap: 1vw;
+}
+.sticky a{
+    text-decoration: none;
+    align-content: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    color: hsl(0, 0%, 75%);
+}
+.sticky a:hover{
+    background-color: hsl(0, 0%, 10%);
+    color: hsl(0, 0%, 100%);
+}
+.content-viewport{
+    display: grid;
+    background: hsl(244 10 50/ 20%);
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 10%;
+    padding-bottom: 1%;
+}
+.content-viewport .page-numbers{
+    grid-column: 1;
+}
+.content-viewport .image-viewport{
+    grid-column: 2;
+}
+.page-numbers{
+    display: grid;
+    align-items: center;
+}
+.image-viewport{
+    display: grid;
+    grid-gap: 10vh;
+}
+.left{
+    
+}

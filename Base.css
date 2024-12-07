@@ -1,0 +1,30 @@
+@property --size{
+    syntax: "<length>";
+    inherits: true;
+    initial-value: calc((100vh + 100vw)/8);
+}
+@property --move-x{
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 0%;
+}
+@property --move-y{
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 0%;
+}
+@property --direction-x{
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+@property --direction-y{
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+@property --color{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: lime;
+}
