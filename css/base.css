@@ -1,0 +1,64 @@
+:root{
+    letter-spacing: 0.02rem;
+    font-size: 18px;
+    --hue: 0;
+    --saturation: 50;
+    --lightness: 95;
+    --lightness-multipier: 1;
+    --color: hsl(var(--hue) var(--saturation) calc(var(--lightness) * var(--lightness-multipier)));
+    --color-2: hsl(var(--hue) var(--saturation) calc(var(--lightness) * var(--lightness-multipier)/2));
+}
+body{
+    margin: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    --color: hsl(var(--hue) var(--saturation) calc(var(--lightness) * var(--lightness-multipier)));
+    --color-2: hsl(var(--hue) var(--saturation) calc(var(--lightness) * var(--lightness-multipier)/2));
+    background-color: var(--color);
+}
+nav{
+    
+    display: grid;
+    position: sticky;
+    top: 0;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    --lightness-multipier: 0.95;
+    --color: hsl(var(--hue) var(--saturation) calc(var(--lightness) * var(--lightness-multipier)));
+    background-color: var(--color);
+    line-height: 200%;
+    z-index: 3;
+    
+    *:hover{
+        --lightness-multipier: 0.8;
+        --color: hsl(var(--hue) var(--saturation) calc(var(--lightness) * var(--lightness-multipier)));
+        background-color: var(--color);
+    }
+    details{
+        cursor: pointer;
+        &::details-content{
+            position: absolute;
+            background-color: var(--color);
+        }
+        &[open]{
+            --lightness-multipier: 0.85;
+            --color: hsl(var(--hue) var(--saturation) calc(var(--lightness) * var(--lightness-multipier)));
+            background-color: var(--color);
+        }
+    }
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+h1{
+    font-size: 64px;
+}
+h3{
+    font-size: 32px;
+}
+
+.slide{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}

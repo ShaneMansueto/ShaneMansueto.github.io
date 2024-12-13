@@ -1,0 +1,7 @@
+@import "base.css";
+
+:root{
+    --hue: 35;
+    --saturation: 60;
+    --lightness: 90;
+}

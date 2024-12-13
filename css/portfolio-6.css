@@ -1,0 +1,14 @@
+@import "base.css";
+
+:root{
+    --lightness: 0;
+    color: white;
+}
+a, details{
+    color: white;
+}
+nav{
+    --lightness: 10;
+    --saturation: 0;
+    --lightness-modifier: 2;
+}

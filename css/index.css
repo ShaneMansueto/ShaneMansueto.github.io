@@ -1,7 +1,43 @@
-body{
+@import "base.css";
+
+:root{
+    overflow-x: hidden;
+    --hue: 200;
+    --saturation: 65;
+}
+.hero-section{
+    text-align: center;
+}
+h1{
+    font-size: 128px;
+}
+#qs{
+    text-align: center;
+}
+.collection-section{
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3%;
+    grid-row-gap: 3%;
+    a{
+        --saturation: 40;
+        --lightness: 65;
+        --color: hsl(var(--hue) var(--saturation) calc(var(--lightness) * var(--lightness-multipier)));
+        --color-2: hsl(var(--hue) var(--saturation) calc(var(--lightness) * var(--lightness-multipier)/2));
+        background-image: linear-gradient(var(--color), var(--color-2)); 
+        *{
+            margin: 5%;
+        }
+        &:hover{
+            transform: scale(1.05);
+            --hue: 100;
+            outline: black solid 1px;
+        }
+    }
 }
 iframe{
-    resize:both;
-    height: 100vh;
+    width: 150%;
+    height: 300px;
+    border: 0;
+    transform: scaleX(.60) translateX(-33%);
 }

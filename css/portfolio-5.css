@@ -1,0 +1,11 @@
+@import "base.css";
+
+:root{
+    --hue: 190;
+}
+tr:hover{
+    background-color: yellow;
+}
+td:hover{
+    background-color: #8abd8c;
+}
